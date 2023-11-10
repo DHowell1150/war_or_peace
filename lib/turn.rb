@@ -35,6 +35,8 @@ class Turn
     else
       player2
     end
+
+    #NEED TO FIGURE OUT WHERE TO P "NO WINNER" IF MUTUALLY_ASSURED_DESTRUCTION HAPPENS
   end
 
   def pile_cards
