@@ -25,3 +25,8 @@ What didn't work so well - ie. what changes will I implement for my next project
 
 What piece of code am I the most proud of?
 - I'm writing this in the second day after release and I'm already pumped about developing my own methods and REALLY understanding the entirety of the code, not just kind of understanding what others helped me with.  
+
+
+
+This link helped with understanding how to build a full deck
+https://www.createdbypete.com/2019/04/24/programming-practice-building-a-deck-of-playing-cards-in-ruby.html

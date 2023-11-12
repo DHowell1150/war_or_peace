@@ -1,6 +1,6 @@
 class Player
-  attr_reader :name
-  attr_accessor :deck
+  attr_reader :name,
+              :deck
               
   def initialize(name, deck)
     @name = name
@@ -9,7 +9,7 @@ class Player
 
   def has_lost?
     deck == []
-    # or deck.empty?
+    #deck.empty?
   end
 end
 

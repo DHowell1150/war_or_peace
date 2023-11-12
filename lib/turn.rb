@@ -29,14 +29,16 @@ class Turn
     if player1.deck.rank_of_card_at(0) > player2.deck.rank_of_card_at(0) == true
       player1 
 
+      #mutually_assured_destruction 
+    elsif (player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0)) == true && (player1.deck.rank_of_card_at(2) == player2.deck.rank_of_card_at(2))
+      "No Winner"
+
     #war
     elsif (player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0)) == true && (player1.deck.rank_of_card_at(2) > player2.deck.rank_of_card_at(2))
       player1
     else
       player2
     end
-
-    #NEED TO FIGURE OUT WHERE TO P "NO WINNER" IF MUTUALLY_ASSURED_DESTRUCTION HAPPENS
   end
 
   def pile_cards
