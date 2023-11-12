@@ -3,14 +3,24 @@ require './lib/deck'
 require './lib/player'
 require './lib/turn'
 #card objects go here
-
 cards = Card.new(suit, v, r)
 player1 = Player.new("Megan", deck1)    
 player2 = Player.new("Aurora",deck2)
 deck = Deck.new(cards)
 turn = Turn.new(player1, player2)
+ 
+require 'pry' ; binding.pry
+#do I need a `def` here?
+def instantiate_cards
+  cards = []
 
-
+  Card::VALUES.each do |v, r|
+    Card::SUITS.each do |suit|
+      cards << Card.new(suit, v, r)
+    end
+  end
+cards
+end
 
 def shuffled_deck #call 'shuffled' not 'cards'
   cards.shuffle #!
@@ -30,7 +40,7 @@ end
 
 # --> make deck to pass to player
 # --> two players
-Player.new(name, deck)
+# Player.new(name, deck)
 # --> start a turn
 
 
