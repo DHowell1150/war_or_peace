@@ -29,4 +29,16 @@ class Card
     @value = value
     @rank = rank
   end
+  
+  def self.instantiated_cards
+    cards = []
+    Card::VALUES.each do |value, rank|
+      Card::SUITS.each do |suit|
+        cards << Card.new(suit, value, rank)
+      end
+    end
+  
+  cards
+  end
+
 end
