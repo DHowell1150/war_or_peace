@@ -9,7 +9,7 @@ class Player
 
   def has_lost?
     deck == []
-    #deck.empty?
+    #deck.empty? in the future??
   end
 end
 

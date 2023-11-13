@@ -4,8 +4,8 @@ require './lib/player'
 require './lib/turn'
 #card objects go here
 
-Card.instantiated_cards
 deck = Deck.new(Card.instantiated_cards)
+require 'pry' ; binding.pry
 
 deck.cards.shuffle!
 
@@ -25,6 +25,6 @@ turn = Turn.new(player1, player2)
 
 # --> start a turn
 
-# puts "Welcome to War! (or Peace) This game will be played with 52 cards.
-# The players today are Megan and Aurora.
-# Type 'GO' to start the game!"
+puts "Welcome to War! (or Peace) This game will be played with 52 cards.
+The players today are Megan and Aurora.
+Type 'GO' to start the game!"

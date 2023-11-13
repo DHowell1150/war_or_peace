@@ -1,6 +1,6 @@
 class Card
   attr_reader :suit,  :value,  :rank
-  #Constants provide a way to define values that are intended to remain constant throughout the execution of a program. 
+  #Constants provide a way to define values that are intended to remain constant throughout the execution of a program. Great for team projects
   VALUES = {
     2 => 2,
     3 => 3,
