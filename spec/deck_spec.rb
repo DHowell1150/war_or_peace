@@ -3,6 +3,7 @@ require './lib/card'
 require './lib/deck'
 
 RSpec.describe Deck do
+  #before(:each)do to DRY it up?
   describe 'initialize' do
     it 'deck is an instance of a deck' do
       card1 = Card.new(:diamond, 'Queen', 12)
@@ -36,7 +37,6 @@ RSpec.describe Deck do
       cards = [card1, card2, card3]
       deck = Deck.new(cards)
 
-      # deck.high_ranking_cards
       expect(deck.high_ranking_cards).to eq([card1, card3])
     end
 

@@ -15,19 +15,22 @@ class Turn
     elsif 
       player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0) && player1.deck.rank_of_card_at(2) != player2.deck.rank_of_card_at(2)
       :war 
-     # per Heidi don't NEED an else statement.  But it seems like I do need the conditional here: 
-
+      
     elsif 
-       player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0) && player1.deck.rank_of_card_at(2) == player2.deck.rank_of_card_at(2)
+      player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0) && player1.deck.rank_of_card_at(2) == player2.deck.rank_of_card_at(2)
       :mutually_assured_destruction
+      # per Heidi don't actually an else statement.  
     end
   end
 
-  #can I fit all types in this winner method or do I need to do a #basic_winner #war_winner as helper methods?
   def winner
     #basic
     if player1.deck.rank_of_card_at(0) > player2.deck.rank_of_card_at(0) == true
       player1 
+
+      #mutually_assured_destruction 
+    elsif (player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0)) == true && (player1.deck.rank_of_card_at(2) == player2.deck.rank_of_card_at(2))
+      "No Winner"
 
     #war
     elsif (player1.deck.rank_of_card_at(0) == player2.deck.rank_of_card_at(0)) == true && (player1.deck.rank_of_card_at(2) > player2.deck.rank_of_card_at(2))
@@ -35,8 +38,6 @@ class Turn
     else
       player2
     end
-
-    #NEED TO FIGURE OUT WHERE TO P "NO WINNER" IF MUTUALLY_ASSURED_DESTRUCTION HAPPENS
   end
 
   def pile_cards
